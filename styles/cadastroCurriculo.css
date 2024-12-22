@@ -1,0 +1,167 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #990000;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilos do formulário de cadastro */
+.cadastro-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    border-color: #990000;
+    outline: none;
+}
+
+.input-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.experiencia input {
+    margin-bottom: 10px;
+}
+
+/* Estilos para adicionar experiências */
+.experiencia-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experiencia-container input {
+    width: 80%;
+    padding: 10px;
+}
+
+.experiencia-container button {
+    padding: 10px 20px;
+    background-color: #990000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.experiencia-container button:hover {
+    background-color: #cc0000;
+}
+
+/* Lista de experiências */
+#listaExperiencias, #listaCursos {
+    list-style: none;
+    margin-top: 10px;
+}
+
+#listaExperiencias li, #listaCursos li {
+    background-color: #f1f1f1;
+    padding: 8px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo do botão de envio */
+.btn-cadastrar {
+    padding: 12px 20px;
+    background-color: #990000;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cadastrar:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+.btn-cadastrar:active {
+    background-color: #b30000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    .cadastro-container {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .input-group input, .input-group textarea {
+        font-size: 14px;
+    }
+
+    .btn-cadastrar {
+        font-size: 16px;
+        padding: 10px 18px;
+    }
+}

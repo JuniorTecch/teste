@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Associados</title>
+    <link rel="stylesheet" href="styles/loginAssociado.css">
+
+    <script>
+        // Bloquear a navegação para a página anterior
+        window.history.pushState(null, null, window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, null, window.location.href);
+        };
+    </script>
+</head>
+
+
+
+<body>
+
+<div class="login-container">
+    <form class="login-form">
+        <h1>Login - Associados</h1>
+
+        <div class="input-group">
+            <label for="inputUser">CNPJ ou CPF</label>
+            <input type="text" id="inputUser" name="inputUser" placeholder="Digite o CNPJ ou CPF" maxlength="18" oninput="mascaraDocumento(event)" required>
+        </div>
+
+        <div class="input-group">
+            <label for="inputSenha">Senha</label>
+            <div class="password-container">
+                <input type="password" id="inputSenha" name="inputSenha" placeholder="Digite sua senha" maxlength="8" required>
+                <span class="eye-icon" id="togglePassword">&#128065;</span>
+            </div>
+        </div>
+
+        <button type="submit" class="login-btn">Entrar</button>
+
+        <div class="footer-links">
+            <a href="esqueceuSenha.html">Esqueceu a senha?</a> | 
+            <a href="#">Cadastrar-se</a>
+           
+
+        </div>
+
+        <div class="pagInicial">
+            <a href="index.html">Pagina Inicial</a>
+        </div>
+       
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

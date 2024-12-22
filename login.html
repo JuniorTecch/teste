@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <script>
+        // Bloquear a navegação para a página anterior
+        window.history.pushState(null, null, window.location.href);
+        window.onpopstate = function () {
+            window.history.pushState(null, null, window.location.href);
+        };
+    </script>
+    
+    <script>
+        function validarLogin() {
+            var senha = document.getElementById("senha").value;
+            
+            // Verifica se a senha tem mais de 8 caracteres
+            if (senha.length > 8) {
+                alert("A senha deve ter no máximo 8 caracteres.");
+                return false;
+            }
+
+            // Caso contrário, permite o envio do formulário
+            return true;
+        }
+
+        // Função para alternar a visibilidade da senha
+        function toggleSenha() {
+            var senhaField = document.getElementById("senha");
+            var eyeIcon = document.getElementById("eye-icon");
+            
+            if (senhaField.type === "password") {
+                senhaField.type = "text";
+                eyeIcon.src = "eye-open.png"; // Ícone de olho aberto
+            } else {
+                senhaField.type = "password";
+                eyeIcon.src = "eye-closed.png"; // Ícone de olho fechado
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <form class="login-form" onsubmit="return validarLogin()">
+            <h1>Login</h1>
+
+            <div class="input-group">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <div class="password-container">
+                    <input type="password" id="senha" name="senha" maxlength="8" required>
+                    <img src="eye-closed.png" alt="Mostrar senha" id="eye-icon" class="eye-icon" onclick="toggleSenha()">
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn">Entrar</button>
+
+            <div class="footer-links">
+                <a href="#">Esqueceu a senha?</a> | <a href="#">Criar conta</a>
+            </div>
+
+            <div class="pagInicial">
+                <a href="index.html">Pagina Inicial</a>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

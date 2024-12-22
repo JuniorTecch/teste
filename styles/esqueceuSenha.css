@@ -1,0 +1,149 @@
+/* Resetando estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o body e o layout geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo do container de recuperação de senha */
+.forgot-password-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+}
+
+/* Título do Formulário */
+.forgot-password-form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #990000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Estilo para os campos de entrada */
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #990000;
+    outline: none;
+}
+
+/* Legenda da senha */
+.senha-legenda {
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+}
+
+.senha-ok {
+    color: green;
+}
+
+.senha-error {
+    color: red;
+}
+
+/* Botão de envio */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #990000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Links no rodapé */
+.footer-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: #990000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.pagInicial {
+    text-align: center;
+    margin-top: 20px;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .forgot-password-container {
+        max-width: 100%;
+        margin: 10px;
+        padding: 25px;
+    }
+
+    .forgot-password-form h1 {
+        font-size: 24px;
+    }
+
+    .input-group input {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+}

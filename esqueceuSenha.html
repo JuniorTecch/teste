@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esqueceu a Senha</title>
+    <link rel="stylesheet" href="styles/esqueceuSenha.css">
+
+    
+    <script>
+        function voltarPaginaAnterior() {
+            // Voltar uma página no histórico
+            if (document.referrer) {
+                window.history.back();
+            } else {
+                // Se não houver página anterior (document.referrer), redireciona para a página inicial
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
+</head>
+
+
+
+<body>
+
+<div class="forgot-password-container">
+    <form class="forgot-password-form" onsubmit="return validarSenhas()">
+        <h1>Esqueceu a Senha?</h1>
+        
+        <div class="input-group">
+            <label for="inputEmail">E-mail Cadastrado</label>
+            <input type="email" id="inputEmail" name="inputEmail" placeholder="Digite seu e-mail" required>
+        </div>
+
+        <div class="input-group">
+            <label for="inputCnpj">CNPJ</label>
+            <input type="text" id="inputCnpj" name="inputCnpj" placeholder="Digite o CNPJ" maxlength="18" oninput="mascaraCNPJ(event)" required>
+        </div>
+
+        <div class="input-group">
+            <label for="inputNomeProprietario">Nome do Proprietário</label>
+            <input type="text" id="inputNomeProprietario" name="inputNomeProprietario" placeholder="Nome do proprietário" required>
+        </div>
+
+        <div class="input-group">
+            <label for="novaSenha">Nova Senha</label>
+            <input type="password" id="novaSenha" name="novaSenha" placeholder="Digite a nova senha" required>
+        </div>
+
+        <div class="input-group">
+            <label for="repetirSenha">Repetir Senha</label>
+            <input type="password" id="repetirSenha" name="repetirSenha" placeholder="Repita a nova senha" required>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar Solicitação</button>
+
+        <div class="footer-links">
+            <a href="#" onclick="voltarPaginaAnterior()">Voltar ao Login</a>
+        </div>
+
+        <div class="pagInicial">
+            <a href="index.html">Pagina Inicial</a>
+        </div>
+
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Currículo</title>
+    <link rel="stylesheet" href="styles/cadastroCurriculo.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Cadastro de Currículo</h1>
+        <p>Preencha as informações abaixo para cadastrar seu currículo.</p>
+    </header>
+
+    <!-- Formulário de Cadastro -->
+    <section class="cadastro-container">
+        <form id="formCadastro" action="#" method="POST" enctype="multipart/form-data" class="cadastro-form">
+            <div class="input-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="input-group">
+                <label for="foto">Foto de Perfil:</label>
+                <input type="file" id="foto" name="foto" accept="image/*" required>
+            </div>
+
+            <div class="input-group">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required min="18" placeholder="Digite sua idade">
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+            </div>
+
+            <div class="input-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+            </div>
+
+            <div class="input-group">
+                <label for="endereco">Endereço:</label>
+                <textarea id="endereco" name="endereco" required placeholder="Digite seu endereço"></textarea>
+            </div>
+
+            <!-- Campo para "Primeiro Emprego" -->
+            <div class="input-group">
+                <label for="primeiroEmprego">Primeiro Emprego:</label>
+                <input type="checkbox" id="primeiroEmprego" name="primeiroEmprego">
+                <label for="primeiroEmprego">Sim, é meu primeiro emprego</label>
+            </div>
+
+            <!-- Seção de Experiência Profissional -->
+            <div class="input-group experiencia">
+                <h3>Experiência Profissional</h3>
+                <label for="empresa">Empresa:</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+
+                <label for="funcao">Função:</label>
+                <input type="text" id="funcao" name="funcao" placeholder="Sua função na empresa">
+
+                <label for="tempo">Tempo de Experiência:</label>
+                <input type="text" id="tempo" name="tempo" placeholder="Exemplo: 2 anos">
+
+                <button type="button" id="adicionarExperiencia">Adicionar Experiência</button>
+            </div>
+
+            <!-- Lista de Experiências -->
+            <ul id="listaExperiencias"></ul>
+
+            <!-- Seção de Cursos -->
+            <div class="input-group cursos">
+                <h3>Cursos e Capacitações</h3>
+                <label for="cursoNome">Nome do Curso:</label>
+                <input type="text" id="cursoNome" name="cursoNome" placeholder="Nome do curso">
+
+                <label for="instituicao">Instituição:</label>
+                <input type="text" id="instituicao" name="instituicao" placeholder="Instituição onde fez o curso">
+
+                <label for="duracao">Duração:</label>
+                <input type="text" id="duracao" name="duracao" placeholder="Duração do curso">
+
+                <button type="button" id="adicionarCurso">Adicionar Curso</button>
+            </div>
+
+            <!-- Lista de Cursos -->
+            <ul id="listaCursos"></ul>
+
+            <button type="submit" class="btn-cadastrar">Cadastrar Currículo</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

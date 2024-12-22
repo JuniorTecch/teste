@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao ConectaProfissionais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+    // Bloquear a navegação para a página anterior
+    window.history.pushState(null, null, window.location.href);
+    window.onpopstate = function () {
+        window.history.pushState(null, null, window.location.href);
+    };
+</script>
+
+
+<body>
+    <!-- Faixa vermelha com o botão "Restrito" -->
+    <header>
+        <h1>Logo</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html" class="btn-restrito">Restrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    
+    <main>
+         <!-- Faixa de pesquisa -->
+    <section class="search-bar">
+        <input type="text" id="searchInput" placeholder="Pesquise aqui...">
+        <button class="search-btn">Pesquisar</button>
+    </section>
+
+        <!-- Seção de introdução -->
+        <section class="intro">
+            <h2>Conectando profissionais a empresas</h2>
+            <p>Faça seu cadastro como profissional ou empresa e encontre as melhores conexões.</p>
+            <div class="buttons">
+                <a href="cadastroCurriculo.html" class="btn">Cadastrar curriculo</a>
+                <a href="loginAssociado.html" class="btn">Acesso dos Associados</a>
+            </div>
+        </section>
+        
+       <!-- Seção de Cursos -->
+<section class="cursos">
+    <h2>Cursos e Capacitações</h2>
+    <p>Aprimore suas habilidades com cursos exclusivos para profissionais cadastrados. Aproveite as oportunidades de aprendizado e torne-se um especialista nas áreas mais demandadas do mercado.</p>
+    
+    <div class="courses-grid">
+        <div class="course">
+            <h3>Curso de Excel Avançado</h3>
+            <p>Domine o Excel e torne-se um especialista em análise de dados. Aprenda fórmulas avançadas, gráficos dinâmicos, macros e como automatizar tarefas repetitivas para aumentar a produtividade no seu trabalho.</p>
+            <ul>
+                <li><strong>Requisitos:</strong> Conhecimento básico de Excel.</li>
+                <li><strong>Duração:</strong> 8 semanas (3 horas por semana).</li>
+                <li><strong>Valor:</strong> R$ 500,00</li>
+            </ul>
+            <a href="#" class="enroll-btn">Inscreva-se Agora</a>
+        </div>
+        
+        <div class="course">
+            <h3>Desenvolvimento Web Full Stack</h3>
+            <p>Transforme-se em um desenvolvedor web completo, aprendendo front-end e back-end. O curso inclui HTML, CSS, JavaScript, Node.js, e bancos de dados SQL e NoSQL, capacitando você para criar e gerenciar websites e aplicações web de ponta a ponta.</p>
+            <ul>
+                <li><strong>Requisitos:</strong> Conhecimentos básicos em programação.</li>
+                <li><strong>Duração:</strong> 12 semanas (5 horas por semana).</li>
+                <li><strong>Valor:</strong> R$ 1.200,00</li>
+            </ul>
+            <a href="#" class="enroll-btn">Inscreva-se Agora</a>
+        </div>
+
+        <div class="course">
+            <h3>Inteligência Artificial e Machine Learning</h3>
+            <p>Adentre o universo da inteligência artificial e machine learning, aprendendo como criar algoritmos inteligentes, utilizar bibliotecas como TensorFlow e scikit-learn, e aplicar esses conhecimentos para resolver problemas reais.</p>
+            <ul>
+                <li><strong>Requisitos:</strong> Conhecimentos em Python e álgebra linear.</li>
+                <li><strong>Duração:</strong> 14 semanas (4 horas por semana).</li>
+                <li><strong>Valor:</strong> R$ 1.500,00</li>
+            </ul>
+            <a href="#" class="enroll-btn">Inscreva-se Agora</a>
+        </div>
+    </div>
+</section>
+ 
+        
+        <!-- Seção de Publicidade -->
+        <section class="publicidade">
+            <h2>Publicidade</h2>
+            <p>Conheça nossos parceiros e aproveite as oportunidades.</p>
+            <div class="ad-grid">
+                <div class="ad">
+                    <h3>Parceiro A</h3>
+                    <p>Ofertas exclusivas para nossos associados.</p>
+                </div>
+                <div class="ad">
+                    <h3>Parceiro B</h3>
+                    <p>Descontos em cursos e serviços especializados.</p>
+                </div>
+                <div class="ad">
+                    <h3>Parceiro C</h3>
+                    <p>Vantagens imperdíveis para profissionais cadastrados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section class="contatos">
+            <div class="c1">
+            <h2>Fale Conosco</h2>
+            <p>Tem dúvidas ou precisa de ajuda? Entre em contato conosco.</p>
+        </div>
+            
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ConectaProfissionais. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
